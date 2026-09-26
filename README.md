@@ -21,7 +21,6 @@ This repository contains clean, modular **Java** implementations of Data Structu
 ## 🚀 How to Compile & Run
 
 ```bash
-# Clone the repository
 git clone https://github.com/SanthoshBussa/DSA.git
 cd DSA
 ```

@@ -2,16 +2,8 @@ package arrays;
 
 import java.util.*;
 
-/**
- * Classic Array, Two-Pointer, and Kadane's Algorithm Problems (LeetCode / GeeksforGeeks)
- * Author: Santhosh Bussa
- */
 public class ArraysAndTwoPointers {
 
-    /**
-     * 1. Two Sum (LeetCode #1)
-     * Time Complexity: O(N), Space Complexity: O(N)
-     */
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> seen = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -24,10 +16,6 @@ public class ArraysAndTwoPointers {
         return new int[]{-1, -1};
     }
 
-    /**
-     * 2. Maximum Subarray Sum - Kadane's Algorithm (LeetCode #53)
-     * Time Complexity: O(N), Space Complexity: O(1)
-     */
     public static int maxSubArray(int[] nums) {
         int currentMax = nums[0];
         int globalMax = nums[0];
@@ -38,10 +26,6 @@ public class ArraysAndTwoPointers {
         return globalMax;
     }
 
-    /**
-     * 3. Container With Most Water (LeetCode #11)
-     * Time Complexity: O(N), Space Complexity: O(1)
-     */
     public static int maxArea(int[] height) {
         int left = 0, right = height.length - 1;
         int maxWater = 0;
@@ -58,10 +42,6 @@ public class ArraysAndTwoPointers {
         return maxWater;
     }
 
-    /**
-     * 4. Trapping Rain Water (LeetCode #42)
-     * Time Complexity: O(N), Space Complexity: O(1)
-     */
     public static int trapRainWater(int[] height) {
         int left = 0, right = height.length - 1;
         int leftMax = 0, rightMax = 0, trapped = 0;
@@ -79,10 +59,6 @@ public class ArraysAndTwoPointers {
         return trapped;
     }
 
-    /**
-     * 5. Merge Intervals (LeetCode #56)
-     * Time Complexity: O(N log N), Space Complexity: O(N)
-     */
     public static int[][] mergeIntervals(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
         List<int[]> merged = new ArrayList<>();

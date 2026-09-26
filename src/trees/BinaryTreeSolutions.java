@@ -2,10 +2,6 @@ package trees;
 
 import java.util.*;
 
-/**
- * Binary Tree & Binary Search Tree (BST) Algorithms
- * Author: Santhosh Bussa
- */
 public class BinaryTreeSolutions {
 
     public static class TreeNode {
@@ -18,10 +14,6 @@ public class BinaryTreeSolutions {
         }
     }
 
-    /**
-     * 1. Level Order Traversal / BFS (LeetCode #102)
-     * Time Complexity: O(N), Space Complexity: O(N)
-     */
     public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) return result;
@@ -43,10 +35,6 @@ public class BinaryTreeSolutions {
         return result;
     }
 
-    /**
-     * 2. Validate Binary Search Tree (LeetCode #98)
-     * Time Complexity: O(N), Space Complexity: O(H)
-     */
     public static boolean isValidBST(TreeNode root) {
         return validate(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
@@ -57,10 +45,6 @@ public class BinaryTreeSolutions {
         return validate(node.left, min, node.val) && validate(node.right, node.val, max);
     }
 
-    /**
-     * 3. Lowest Common Ancestor of a Binary Tree (LeetCode #236)
-     * Time Complexity: O(N), Space Complexity: O(H)
-     */
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) return root;
         TreeNode left = lowestCommonAncestor(root.left, p, q);

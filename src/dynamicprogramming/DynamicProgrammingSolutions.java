@@ -2,16 +2,8 @@ package dynamicprogramming;
 
 import java.util.Arrays;
 
-/**
- * Dynamic Programming Classics (LeetCode / GeeksforGeeks)
- * Author: Santhosh Bussa
- */
 public class DynamicProgrammingSolutions {
 
-    /**
-     * 1. Longest Increasing Subsequence (LeetCode #300)
-     * Time Complexity: O(N log N) using Patience Sorting + Binary Search
-     */
     public static int lengthOfLIS(int[] nums) {
         int[] tails = new int[nums.length];
         int size = 0;
@@ -24,10 +16,6 @@ public class DynamicProgrammingSolutions {
         return size;
     }
 
-    /**
-     * 2. Coin Change - Minimum Coins (LeetCode #322)
-     * Time Complexity: O(Amount * N), Space Complexity: O(Amount)
-     */
     public static int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, amount + 1);
@@ -43,10 +31,6 @@ public class DynamicProgrammingSolutions {
         return dp[amount] > amount ? -1 : dp[amount];
     }
 
-    /**
-     * 3. Longest Common Subsequence (LeetCode #1143)
-     * Time Complexity: O(M * N), Space Complexity: O(M * N)
-     */
     public static int longestCommonSubsequence(String text1, String text2) {
         int m = text1.length(), n = text2.length();
         int[][] dp = new int[m + 1][n + 1];
